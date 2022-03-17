@@ -1,0 +1,114 @@
+@import "./_variable.scss/";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,300&display=swap');
+
+*
+{
+ margin:0;
+ padding:0;
+ font-family: $primary-font;
+ box-sizing: border-box;
+}
+
+header
+{
+  align-items: $align-center;
+  text-align: $text-center;
+  background-color: $primary-color;
+  color:$dark-color;
+
+  padding:$main-padding;
+   & >h1{
+    font-family: $primary-font;
+    padding:1rem;
+
+   }
+   & >h3{
+    font-family: $secondary-font;
+   }
+}
+
+.row
+{
+ padding:2rem;
+ display: flex;
+ 
+ & > .side
+ {
+      color:$dark-color;
+      flex:20%;
+      text-align: $align-center;
+      padding:1rem;
+      line-height: 2;
+      border-right:1px solid $gray-color;
+        & > .list
+        {
+          list-style: none;
+        }  
+ }
+
+ & > .main
+    {
+      flex:40%;
+      padding:1rem;
+      
+    }
+
+    & >form >input 
+    {
+      padding:1rem;
+    }
+  & > .todolist
+  {
+    flex:40%;
+    padding:1rem;
+    background-color: $light-bgcolor;
+    
+    border-left:1px solid $gray-color;
+
+    &>h4{
+      text-align: $align-center;
+    }
+  }
+}
+
+form{
+  align-items: center;
+}
+input[type=text]
+{
+  border:none;
+  background-color: transparent;
+  height: 40px;
+  width:100%;
+  border-bottom:2px solid $primary-color;
+}
+
+.addbtn
+{
+  color:$light-color;
+  background-color: $primary-color;
+  padding:0.7rem;
+  outline: none;
+  cursor: pointer;
+  border:none;
+  box-shadow: 2px 3px #e3e3e3;
+  align-items: center;
+  border-radius:6px;
+  transition: 250ms;
+  float:right;
+}
+.addbtn:hover{
+  color:$light-color;
+  background-color: $secondary-color;
+  text-align: center;
+  
+}
+ul>li
+{
+  padding:1rem;
+  list-style: none;
+}

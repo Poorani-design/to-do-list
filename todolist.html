@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>TO DO LIST</title>
+ <link rel="stylesheet" href="./css/main.css">
+ <style>
+     @media screen and (max-width:700px)
+{
+    .row
+    {
+        flex-direction: column;
+    }
+    
+}
+
+ </style>
+</head>
+<body>
+    <header>
+         <h1>TO DO LIST</h1>
+         <h3>Language using HTML, SCSS and JS</h3>
+    </header>
+<div class="row">
+    <div class="side">
+       <h3>Projects</h3>
+
+        <ul class="list">
+           <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+        </ul>
+    </div>
+    <div class="main">
+                <form>
+                    <input type="text" placeholder="Typing..." id="myTxt" class="s">
+                    <br/>
+                    <br/>
+                    <span type="button" onclick="myFunc()" class="addbtn" id="addbtn">Add</span>
+                </form>      
+    </div>
+    <div class="todolist">
+        <h4>your task are given below: </h4>
+                <ul id="myUl">
+                    <li>Task 1</li>
+                    <li>Task 2</li>            
+                    <li>Task 3</li>
+                </ul>
+    </div>
+</div>
+<script>
+    function myFunc()
+    {
+        var li = document.createElement("li");
+        var inputValue = document.getElementById("myTxt").value;
+        var newNode = document.createTextNode(inputValue);
+       li.appendChild(newNode);
+       if(inputValue === ""){
+            alert("Field is empty Kindly add task");
+            }else{
+                document.getElementById("myUl").appendChild(li);
+            }
+        document.getElementById("myTxt").value="";
+    }
+</script>
+</body>
+</html>
